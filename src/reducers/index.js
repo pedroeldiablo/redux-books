@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
-import BooksReducer from './reducer_books';
-import ActiveBook from './reducer_active_book';
+import { reducer as formReducer } from 'redux-form';
+import PostsReducer from './reducer_posts';
+
 
 const rootReducer = combineReducers({
-  books: BooksReducer,
-  activeBook : ActiveBook
+  posts: PostsReducer,
+  form: formReducer
 });
+
+
 
 export default rootReducer;
